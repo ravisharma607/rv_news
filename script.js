@@ -53,7 +53,6 @@ function onNavItemClick(id){
     fetchNews(id);
     const navItem = document.getElementById(id);
     const navLinks = document.querySelector('#nav-links');
-    console.log(id);
     curSelectedNav?.classList.remove('active');
     curSelectedNav = navItem;
     curSelectedNav.classList.add('active');
