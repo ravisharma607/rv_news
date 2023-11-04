@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RV World News: A dynamic and informative news website providing the latest updates on a wide range of topics, from sports and finance to politics and more. Stay informed with our user-friendly platform. Explore the world of news at RV World News.">
+    <title>RV News - Explore Latest News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <div class="logo">
+                <a href="#" onclick="reload()">
+                    <h2>RV W🌍rld</h2>
+                </a>
+            </div>
+            <div class="nav-links">
+                <ul class="flex active" id="nav-links">
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                </ul>
+            </div>
+            <div class="search flex">
+                <input type="text" name="text" id="search-text" placeholder="e.g Science.">
+                <button class="btn" id="search-btn">Search</button>
+            </div>
+            <div class="menu flex">
+                <ion-icon name="menu" id="menu-icon"></ion-icon>
+            </div>
+        </div>
+    </nav>
+
+    <main class="cards-container container flex" id="cards-container">
+
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news image" id="news-image">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This Is A Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 04/11/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quidem
+                    soluta quas incidunt ea hic tenetur, harum temporibus eius libero deserunt veritatis.</p>
+            </div>
+        </div>
+    </template>
+
+    
+    <!-- Icons CDN Link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

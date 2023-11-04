@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all 0.5s ease;
+    /* overflow: hidden; */
+}
+:root{
+    --primary-text-color:#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+    --padding-inline-section:20px;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    color: var(--primary-text-color);
+    position: relative;
+}
+p{
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+nav{
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    left: 0;
+    right: 0;
+}
+.main-nav{
+    justify-content: space-between;
+    padding: 8px;
+}
+.main-nav .logo{
+    border: 2px solid #2294ed;
+    padding: 5px 15px;
+    border-radius: 6px;
+}
+.nav-links ul{
+    gap: 16px;
+}
+.nav-links ul li{
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.nav-links ul li:hover{
+    color: var(--secondary-text-color);
+}
+.nav-links ul li:active{
+    color:tomato;
+}
+.nav-links ul li.active{
+    color:var(--accent-color);
+}
+.search{
+    gap: 8px;
+}
+.search input{
+    width: 200px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    outline: none;
+    border: 2px solid #bbd0e2;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.btn{
+    padding: 8px 25px;
+    background-color: var(--accent-color);
+    color: #f3faff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+.btn:hover{
+    background-color: var(--accent-color-dark);
+}
+main{
+    padding-block: 18px;
+    margin-top: 80px;
+}
+.cards-container{
+    justify-content:center;
+    gap: 20px;
+    align-items:center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+}
+.card:hover{
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f4f9fb;
+    transform: translateY(-2px);
+}
+.card-header img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.card-content{
+    padding: 12px;
+}
+.card-content .news-source{
+    margin-block: 12px;
+}
+.menu{
+    display: none;
+}
+@media screen and (max-width:734px){
+    .card{
+        width: 90%;
+    }
+    .main-nav{
+        padding: 8px;
+    }
+    .main-nav .logo{
+        padding: 5px 10px;
+    }
+    .main-nav .logo h2{
+        font-size: 1rem;
+    }
+    .nav-links ul li{
+        font-size: 1rem;
+    }
+    main{
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width:634px){
+    .menu{
+        display: flex;
+        font-size: 2.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    nav{
+        position: relative;
+    }
+    .nav-links ul{
+        flex-direction: column;
+        height: 400px;
+        justify-content: center;
+        position:fixed;
+        height: 170px;
+        width: 50%;
+        top: 60px;
+        right:5px;
+        z-index: 9;
+        background-color: #eff2f6;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+    .nav-links ul.active{
+        right: -400px;
+    }
+    .nav-links ul li{
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+}
+@media screen and (max-width:477px){
+    .search input{
+        font-size: .8rem;
+        padding: 5px 15px;
+    }
+    .btn{
+        font-size: .8rem;
+        padding: 5px 25px;
+    }
+    .main-nav .logo h2{
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width:450px){
+    .search input{
+        width: 130px;
+    }
+    .main-nav .logo h2{
+        font-size: .5rem;
+    }
+    .main-nav .logo{
+        padding: 5px 10px;
+    }
+    .search input{
+        padding: 3px 10px;
+    }
+    .btn{
+        padding: 3px 15px;
+    }
+    .menu{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:380px){
+    .search input{
+        width: 100px;
+    }
+    .main-nav .logo h2{
+        font-size: .5rem;
+    }
+    .main-nav .logo{
+        padding: 5px 10px;
+    }
+    .search input{
+        padding: 3px 5px;
+    }
+    .btn{
+        padding: 3px 10px;
+    }
+    .search{
+        gap: 2px;
+    }
+}
