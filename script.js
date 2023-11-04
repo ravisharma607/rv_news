@@ -9,7 +9,7 @@ async function fetchNews(query){
     try{
         const response = await fetch(`https://newsapi.org/v2/everything?q=${query}&apiKey=${api_key}`);
         if(!response.ok){
-            console.log('An Error While Fetching');
+            // console.log('An Error While Fetching');
         }
         const data = await response.json();
         bindData(data.articles);
